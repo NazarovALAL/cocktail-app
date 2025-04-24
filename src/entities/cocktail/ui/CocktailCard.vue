@@ -24,25 +24,12 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import { countOfMeasures } from '@/shared/config';
 import { Cocktail } from '@/shared/types';
+import { extractIngredients } from '@/shared/utils/ingredients';
 
 const props = defineProps<{ drink: Cocktail }>();
 
-const ingredients = computed(() => {
-  const list = [];
-
-  for (let i = 1; i <= countOfMeasures; i++) {
-    const measure = (props.drink as Record<string, string | null>)[`strMeasure${i}`];
-    const ingredient = (props.drink as Record<string, string | null>)[`strIngredient${i}`];
-
-    if (ingredient) {
-      list.push({ measure: measure || '', ingredient });
-    }
-  }
-
-  return list;
-});
+const ingredients = computed(() => extractIngredients(props.drink));
 </script>
 
 <style lang="scss" scoped>
