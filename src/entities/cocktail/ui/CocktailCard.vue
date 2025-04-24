@@ -1,7 +1,7 @@
 <template>
   <div class="card">
-    <div class="card-header">
-      <div class="text">
+    <div class="card-wrapper">
+      <div class="card-body">
         <h2 class="title">{{ drink.strDrink }}</h2>
         <p><strong>Category:</strong> {{ drink.strCategory }}</p>
         <p><strong>Alcoholic:</strong> {{ drink.strAlcoholic }}</p>
@@ -41,7 +41,7 @@ const ingredients = computed(() => extractIngredients(props.drink));
   box-shadow: 0 2px 8px $color-shadow;
 }
 
-.card-header {
+.card-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -59,13 +59,13 @@ const ingredients = computed(() => extractIngredients(props.drink));
   flex-shrink: 0;
 }
 
-.text {
+.card-body {
   flex: 1;
   min-width: 0;
 }
 
 @media (max-width: 768px) {
-  .card-header {
+  .card-wrapper {
     flex-direction: column;
     align-items: center;
   }
@@ -79,7 +79,7 @@ const ingredients = computed(() => extractIngredients(props.drink));
     margin: 0 auto 16px auto;
   }
 
-  .text {
+  .card-body {
     width: 100%;
     padding: 0 16px;
     order: 2;
