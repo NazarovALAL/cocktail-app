@@ -33,7 +33,10 @@ watch(
   () => route.path,
   (path) => {
     const code = path.replace('/', '');
-    if (code) store.fetchCocktails(code);
+
+    if (code) {
+      store.fetchCocktails(code);
+    }
   },
   { immediate: true },
 );
@@ -47,5 +50,21 @@ watch(
   align-items: center;
   font-weight: bold;
   font-size: 18px;
+}
+
+.error {
+  color: #b00020;
+  background: #ffe5e5;
+  padding: 12px 16px;
+  border: 1px solid #b00020;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .error {
+    margin: 20px;
+  }
 }
 </style>
