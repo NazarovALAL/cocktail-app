@@ -53,10 +53,10 @@ watch(
 }
 
 .error {
-  color: #b00020;
-  background: #ffe5e5;
+  color: $color-error;
+  background: $color-error-bg;
   padding: 12px 16px;
-  border: 1px solid #b00020;
+  border: 1px solid $color-error;
   border-radius: 6px;
   margin-bottom: 20px;
   font-weight: bold;

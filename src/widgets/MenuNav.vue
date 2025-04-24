@@ -25,8 +25,8 @@ const isActive = (path: string) => route.path === path;
 .sidebar {
   width: 200px;
   min-width: 200px;
-  background: #f0f0f0;
-  border-right: 1px solid #ddd;
+  background: $color-background;
+  border-right: 1px solid $color-border;
   display: flex;
   flex-direction: column;
   padding: 16px 0;
@@ -36,17 +36,17 @@ const isActive = (path: string) => route.path === path;
 .menu-item {
   padding: 12px 16px;
   text-decoration: none;
-  color: #333;
+  color: $color-primary;
   transition:
     background 0.2s,
     color 0.2s;
 
   &:hover {
-    background-color: #e4e4e4;
+    background-color: $color-hover;
   }
 
   &.active {
-    background: #ccc;
+    background: $color-border;
     font-weight: bold;
   }
 }
@@ -61,7 +61,7 @@ const isActive = (path: string) => route.path === path;
     min-width: 100%;
     flex-direction: row;
     border-right: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $color-border;
     overflow-x: auto;
   }
 

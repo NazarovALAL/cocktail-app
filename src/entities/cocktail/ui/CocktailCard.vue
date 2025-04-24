@@ -48,10 +48,10 @@ const ingredients = computed(() => {
 <style lang="scss" scoped>
 .card {
   margin-bottom: 20px;
-  background: #fafafa;
+  background: $color-background;
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px $color-shadow;
 }
 
 .card-header {
@@ -68,7 +68,7 @@ const ingredients = computed(() => {
   max-height: 220px;
   object-fit: cover;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid $color-border;
   flex-shrink: 0;
 }
 
