@@ -12,7 +12,7 @@ const getDefaultRoute = (): string => {
   return '/';
 };
 
-const cocktailRoutes: RouteRecordRaw[] = cocktailCodes.map(code => ({
+const cocktailRoutes: RouteRecordRaw[] = cocktailCodes.map((code) => ({
   path: `/${code.toLowerCase()}`,
   component: CocktailPage,
 }));
@@ -24,7 +24,7 @@ export const router = createRouter({
     ...cocktailRoutes,
     {
       path: '/:pathMatch(.*)*',
-      component: NotFoundPage
+      component: NotFoundPage,
     },
-  ]
+  ],
 });

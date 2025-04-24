@@ -3,12 +3,11 @@ import { defineStore } from 'pinia';
 import { fetchCocktails } from '@/shared/api/cocktails';
 import { Cocktail } from '@/shared/types';
 
-
 export const useCocktailStore = defineStore('cocktails', {
   state: () => ({
     cocktails: [] as Cocktail[],
     error: '',
-    loading: false
+    loading: false,
   }),
   actions: {
     async fetchCocktails(code: string) {
@@ -23,6 +22,6 @@ export const useCocktailStore = defineStore('cocktails', {
       } finally {
         this.loading = false;
       }
-    }
-  }
+    },
+  },
 });

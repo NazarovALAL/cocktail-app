@@ -6,7 +6,6 @@ import { router } from './app/router';
 
 import './shared/styles/main.scss';
 
-
 const app = createApp(App);
 
 app.use(createPinia());

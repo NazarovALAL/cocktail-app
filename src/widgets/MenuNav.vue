@@ -37,7 +37,9 @@ const isActive = (path: string) => route.path === path;
   padding: 12px 16px;
   text-decoration: none;
   color: #333;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 
   &:hover {
     background-color: #e4e4e4;
@@ -68,5 +70,4 @@ const isActive = (path: string) => route.path === path;
     text-align: center;
   }
 }
-
 </style>

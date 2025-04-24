@@ -2,18 +2,14 @@
   <div class="container">
     <MenuNav />
     <div class="content">
-      <div class="loading-wrapper" v-if="loading">
+      <div v-if="loading" class="loading-wrapper">
         <div class="loader">Loading...</div>
       </div>
       <template v-else-if="error">
         <div class="error">Error: {{ error }}</div>
       </template>
       <template v-else>
-        <CocktailCard
-          v-for="drink in cocktails"
-          :key="drink.idDrink"
-          :drink="drink"
-        />
+        <CocktailCard v-for="drink in cocktails" :key="drink.idDrink" :drink="drink" />
       </template>
     </div>
   </div>
@@ -39,7 +35,7 @@ watch(
     const code = path.replace('/', '');
     if (code) store.fetchCocktails(code);
   },
-  { immediate: true }
+  { immediate: true },
 );
 </script>
 

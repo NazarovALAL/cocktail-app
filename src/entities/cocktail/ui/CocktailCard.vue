@@ -1,4 +1,3 @@
-
 <template>
   <div class="card">
     <div class="card-header">
@@ -23,12 +22,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from 'vue';
 
 import { countOfMeasures } from '@/shared/config';
 import { Cocktail } from '@/shared/types';
 
-const props = defineProps<{ drink: Cocktail }>()
+const props = defineProps<{ drink: Cocktail }>();
 
 const ingredients = computed(() => {
   const list = [];
